@@ -1,0 +1,201 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+.tagline {
+    display: flex;
+    width: 100vw;
+    background-color: crimson;
+    justify-content: flex-end;
+}
+
+h1 {
+    padding-right: 50px;
+}
+
+.container,
+.task-list {
+    margin: auto;
+    margin-top: 12px;
+    padding: 10px;
+    width: 80vw;
+    height: 40vh;
+    background: linear-gradient(to left ,lightgreen,crimson);
+    border: 2px solid rgb(12, 175, 12);
+}
+
+input {
+    font-size: larger;
+}
+
+#task {
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(12, 175, 12);
+    border-radius: 8px;
+    width: 30vw;
+    padding: 10px;
+}
+
+#task-date {
+    margin-top: 10px;
+    border: 2px solid lightseagreen;
+    color: seagreen;
+    border-radius: 8px;
+}
+
+#task-data {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    width: 60vw;
+    font-size: large;
+}
+
+#task::placeholder {
+    color:white;
+    font-weight: bold;
+}
+
+#add-task {
+    margin-top:20px;
+    background-color: black;
+    font-size: x-large;
+    color: lightgreen;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#add-task:hover {
+    color: crimson;
+    border: 2px solid lightgreen;
+    cursor: pointer;
+}
+
+/* Task List */
+.task-list {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+}
+
+.data {
+    color: rgb(245, 239, 239);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    border-bottom:2px solid white; 
+    margin-top: 10px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+.data:hover {
+    background-color: white;
+    border:1px solid lightseagreen;
+    color: black;
+    cursor: pointer;
+}
+.data .deadline {
+    background-color: greenyellow;
+    padding: 3px;
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.data .status{
+    margin-block: 10px;
+}
+.data button {
+    background-color: crimson;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    margin-inline: 10px;
+    border-radius: 4px ;
+    
+}
+.data button:hover {
+    background-color: black;
+    color: lightseagreen;
+   
+    
+}
+
+/* show-content  */
+.desc{
+   display: none;
+   background-color: lightseagreen;
+   font-size: larger;
+   font-weight: bolder;
+   border-bottom:2px solid lightseagreen ;
+   border-radius: 0px 25px 0px 15px;
+   padding: 5px;
+   margin-left: 8px;
+}
+
+/* modal */
+.modal {
+    display: none;
+    align-self: center;
+    flex-direction: column;
+    position: absolute;
+    top: 10rem;
+    width: 60vw;
+    height: 45vh;
+    background: linear-gradient(lightseagreen,crimson);;
+    border: 2px solid black;
+    color: black;
+    padding: 20px;
+    box-shadow: 0px 0px 30px 360px rgb(0 0 0 / 60%);
+}
+
+.modal button {
+    background-color: red;
+    align-self: flex-end;
+    font-size: x-large;
+    width: 3rem;
+    cursor: pointer;
+}
+
+.modal button:hover{
+    color: white;
+    background-color: lightseagreen;
+}
+
+.modal h3 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+.modal input,textarea {
+    background-color: gainsboro;
+}
+
+#Head{
+    padding: 4px;
+}
+#edit-task{
+    margin-bottom:20px ;
+    margin-top:20px ;
+    padding: 5px;
+    font-size: large;
+}
+#edit-date{
+    width: 20vw;
+    padding: 10px;
+}
+
+#save{
+    background-color: lightseagreen;
+    color: black;
+    align-self: flex-start;
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#save:hover {
+    color: lightseagreen;
+    background-color: black;
+    border: 1px solid lightseagreen;
+}
