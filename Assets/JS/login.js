@@ -15,10 +15,10 @@ loginForm.addEventListener('submit', e => {
         loginForm.reset();
 
     }).catch(error => {
-       
+
         h2.textContent = 'No record Found. Please recheak your email and password or Sign up now.';
         h2.style.color = 'red';
-        
+
     })
 
 
