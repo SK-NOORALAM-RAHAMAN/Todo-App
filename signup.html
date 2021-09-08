@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/CSS/style2.css">
+
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
-    <title>Todolist App || Log in Page </title>
 
+    <title>Todolist App || Sign up Page </title>
 </head>
 
 <body>
-    <h1>Login Page</h1>
-    <div class="container">
+    <h1> Sign up </h1>
+    <div class="container" id="register">
 
-        <form action="#" id="login-form">
+        <form action="#" id="signup-form">
             <div class="formContent">
                 <label class="formText" for="#">
                     Email address :
@@ -26,7 +27,7 @@
             </div>
             <div class="formContent">
                 <input type="email" name="" class="inputText" placeholder="Enter your Email" size="10" required
-                    id="login-email">
+                    id="signup-email">
             </div>
 
             <div class="formContent">
@@ -37,25 +38,30 @@
             </div>
             <div class="formContent">
                 <input type="password" name="" class="inputText" placeholder="Enter new Password" minlength="6"
-                    maxlength="8" required id="login-password">
+                    maxlength="8" required id="signup-password">
             </div>
-            
-            <div id="btn">
-                <button type="button" id="new">
-                    New / Sign up
-                </button>
-                <button type="submit">
-                    Log in
-                </button >
+            <div class="formContent">
+                <label class="formText" for="#">
+                    Confirm Password :
+                </label>
 
             </div>
+            <div class="formContent">
+                <input type="password" name="" class="inputText" placeholder="Enter new Password again" minlength="6"
+                    maxlength="8" required id="signup-password-confirm">
+            </div>
+
+            <div id="btn">
+                <button type="submit">Sign up</button>
+
+            </div>
+
         </form>
-        
+
     </div>
     <div id="error">
         <h3 id="note">^ Please keep remember your mail id & password ^</h3>
     </div>
-
     <script>
 
         // Web app's Firebase configuration
@@ -72,7 +78,7 @@
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
     </script>
-    <script src="Assets/JS/login.js"></script>
+    <script src="Assets/JS/signup.js"></script>
 </body>
 
 </html>

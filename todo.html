@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App || Easily manage you daily tasks</title>
+
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+</head>
+
+<body>
+    <div class="tagline">
+        <h1 id="title">Todolist</h5>
+            <button type="button" id="logout">Logout
+            </button>
+            <h2 id="user">demo@email.com</h2>
+    </div>
+
+    <div class="container">
+        <form action="#">
+            <input type="text" name='task' id="task" placeholder="Add todo Heading">
+            <br>
+            <input type="text" name='task' id="task-data" placeholder="Description">
+            <br>
+            <input type="date" name="date" id="task-date">
+            <br>
+
+            <br>
+            <button id="add-task">Add task</button>
+        </form>
+    </div>
+    <div class="task-list">
+        <div class="data">
+            <div class="status">
+                <span class="text">Dummy todo</span>
+                <span class="deadline">00:00:00</span>
+            </div>
+            <div class="btn">
+                <button class="edit">edit</button>
+                <button class="delete">delete</button>
+            </div>
+        </div>
+        <textarea name="desc" class="desc" cols="50" rows="5" placeholder="sdsdsdsdsdd"></textarea>
+
+    </div>
+    <!-- modal -->
+    <div class="modal">
+        <button id="exit">X</button>
+        <h3 id="title">Edit you todo Item </h3>
+        <input type="text" id="Head" placeholder="Heading">
+        <textarea name="" id="edit-task" cols="50" rows="5" placeholder="Text"></textarea>
+        <input type="date" name="" id="edit-date">
+        <br>
+        <button id="save">Save</button>
+
+    </div>
+
+    <script>
+
+        // Web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD3TxlpYFVh4Bi9BNnosa9EyY8mgnXNd98",
+            authDomain: "todolist-126d4.firebaseapp.com",
+            databaseURL: "https://todolist-126d4.firebaseio.com",
+            projectId: "todolist-126d4",
+            storageBucket: "todolist-126d4.appspot.com",
+            messagingSenderId: "121582562366",
+            appId: "1:121582562366:web:c47b3d27750f9ffcaff56f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+    <script src="Assets/JS/app.js"></script>
+</body>
+
+</html>

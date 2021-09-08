@@ -7,12 +7,28 @@ body{
     display: flex;
     width: 100vw;
     background-color: crimson;
-    justify-content: flex-end;
+    justify-content: space-around;
 }
 
-h1 {
-    padding-right: 50px;
+#logout{
+    height: 30px;
+    font-size: large;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: lightgreen;
+    cursor: pointer;
+
 }
+
+#logout:hover{
+    background-color: crimson;
+    border: 2px solid lightgreen;
+}
+
+#user{
+    color: white;
+}
+
 
 .container,
 .task-list {

@@ -1,3 +1,18 @@
+// for authenticate
+
+let currentUser = null;
+auth.onAuthStateChanged(user => {
+    getTodos();
+})
+
+// for logout
+const logout = document.getElementById('logout').addEventListener('click', e => {
+    e.preventDefault();
+    auth.signOut();
+    window.location.replace('index.html');
+})
+
+
 const addTask = document.getElementById('add-task');
 
 addTask.addEventListener('click', function addData(e) {
@@ -15,7 +30,7 @@ addTask.addEventListener('click', function addData(e) {
     } else {
 
         // Adding data to FireBase
-        db.collection('todos').add({
+        db.collection('alltodos').doc(currentUser.uid).collection('todos').add({
             title: head,
             content: content,
             date: date
@@ -102,7 +117,7 @@ function renderList(doc) {
 
     deleteBtn.addEventListener('click', e => {
         let id = e.target.parentElement.parentElement.getAttribute('data-id');
-        db.collection('todos').doc(id).delete();
+        db.collection('alltodos').doc(currentUser.uid).collection('todos').doc(id).delete();
         console.log(id);
         targetDiv.remove();
         desc.remove();
@@ -115,9 +130,6 @@ function renderList(doc) {
 }
 
 
-
-
-
 // Modal****************************************************
 function modal1(updateId, head, content, date) {
     document.querySelector('.modal').style.display = 'flex';
@@ -128,7 +140,7 @@ function modal1(updateId, head, content, date) {
 
     const save = document.getElementById('save');
     save.addEventListener('click', function update() {
-        db.collection("todos").doc(updateId).update({
+        db.collection('alltodos').doc(currentUser.uid).collection("todos").doc(updateId).update({
             title: document.getElementById('Head').value,
 
             content: document.getElementById('edit-task').value,
@@ -155,18 +167,26 @@ function reset() {
 
 // Firebase************************************************
 
-db.collection('todos').orderBy('title').onSnapshot(snapshot => {
-    let changes = snapshot.docChanges();
-    changes.forEach(change => {
-        if (change.type == 'added') {
-            renderList(change.doc);
-        } else if (change.type == 'removed') {
-            console.log('removed');
+function getTodos() {
+    currentUser = auth.currentUser;
+    if (currentUser != null) {
+        document.getElementById('user').textContent = currentUser.email;
+    }
+    console.log('current user', currentUser);
+    db.collection('alltodos').doc(currentUser.uid).collection('todos').orderBy('title').onSnapshot(snapshot => {
+        let changes = snapshot.docChanges();
+        changes.forEach(change => {
+            if (change.type == 'added') {
+                renderList(change.doc);
+            } else if (change.type == 'removed') {
+                console.log('removed');
 
-        } else if (change.type == 'modified') {
-            console.log('modified');
+            } else if (change.type == 'modified') {
+                console.log('modified');
 
-        }
-    });
-})
+            }
+        });
+    })
+
+}
 
