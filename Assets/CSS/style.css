@@ -2,7 +2,9 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0px;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
+/* Navbar */
 .tagline {
     display: flex;
     width: 100vw;
@@ -27,9 +29,10 @@ body{
 
 #user{
     color: white;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-
+/* Add todos */
 .container,
 .task-list {
     margin: auto;
@@ -55,13 +58,13 @@ input {
 }
 
 #task-date {
-    margin-top: 10px;
+    margin-top: 8px;
     border: 2px solid lightseagreen;
     border-radius: 8px;
 }
 
 #task-data {
-    margin-top: 20px;
+    margin: 20px 0px 10px 0px;
     padding: 10px;
     background-color: black;
     color: white;
@@ -113,7 +116,10 @@ input {
     color: black;
     cursor: pointer;
 }
-.data .deadline {
+#date-label{
+    display: none;
+}
+.data .deadline, #date-label{
     background-color: greenyellow;
     padding: 3px;
     color: green;
@@ -150,6 +156,7 @@ input {
    border-radius: 0px 25px 0px 15px;
    padding: 5px;
    margin-left: 8px;
+   font-family: 'Ubuntu', sans-serif;
 }
 
 /* modal */
@@ -192,12 +199,14 @@ input {
 
 #Head{
     padding: 4px;
+    font-family: 'Ubuntu', sans-serif;
 }
 #edit-task{
     margin-bottom:20px ;
     margin-top:20px ;
     padding: 5px;
     font-size: large;
+    font-family: 'Ubuntu', sans-serif;
 }
 #edit-date{
     width: 20vw;
@@ -246,6 +255,15 @@ input {
     #add-task{
         font-size: large;
     }
+    #task-date{
+        width: 45px;
+    }
+    #date-label{
+        display: inline;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
 
     /* Modal */
 

@@ -12,7 +12,7 @@ const logout = document.getElementById('logout').addEventListener('click', e => 
     window.location.replace('index.html');
 })
 
-
+// Adding todos to Firebase
 const addTask = document.getElementById('add-task');
 
 addTask.addEventListener('click', function addData(e) {
@@ -41,6 +41,7 @@ addTask.addEventListener('click', function addData(e) {
 
 })
 
+// Render TodoList form Firebase
 function renderList(doc) {
     const targetDiv = document.createElement('div');
     targetDiv.className = 'data';
@@ -97,7 +98,6 @@ function renderList(doc) {
 
     targetDiv.addEventListener('click', e => {
         let bool = e.isTrusted;
-        //  console.log(bool);
         const id = e.target.getAttribute('data-id');
         const desc = document.getElementById(`desc${id}`);
         if (magic.view == 'false') {
@@ -115,6 +115,7 @@ function renderList(doc) {
 
     })
 
+    // Task Delete
     deleteBtn.addEventListener('click', e => {
         let decide = confirm('This item will be permanently deleted. Are you sure ?');
         if (decide) {
@@ -128,6 +129,7 @@ function renderList(doc) {
         }
 
     })
+    // Task Edit
     editBtn.addEventListener('click', e => {
         let id = e.target.parentElement.parentElement.getAttribute('data-id');
         modal1(id, doc.data().title, doc.data().content, doc.data().date);

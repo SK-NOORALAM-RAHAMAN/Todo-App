@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App || Easily manage you daily tasks</title>
 
+    <!-- CSS link -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
-
+    <!-- Google Font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <!-- Firebase links -->
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
 </head>
 
 <body>
+    <!-- Navbar -->
     <div class="tagline">
         <h1 id="title">Todolist</h5>
             <button type="button" id="logout">Logout
@@ -22,12 +26,14 @@
             <h2 id="user">demo@email.com</h2>
     </div>
 
+    <!-- Add todos -->
     <div class="container">
         <form action="#" id="add-task-form">
             <input type="text" name='task' id="task" placeholder="Add todo Heading">
             <br>
             <input type="text" name='task' id="task-data" placeholder="Description">
             <br>
+            <label id="date-label">Deadline:</label>
             <input type="date" name="date" id="task-date">
             <br>
 
@@ -35,6 +41,7 @@
             <button id="add-task" type="submit">Add task</button>
         </form>
     </div>
+    <!-- todoList -->
     <div class="task-list">
         <div class="data">
             <div class="status">
@@ -78,6 +85,7 @@
         const db = firebase.firestore();
         const auth = firebase.auth();
     </script>
+    <!-- JavaScript link -->
     <script src="Assets/JS/app.js"></script>
 </body>
 
