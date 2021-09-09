@@ -116,11 +116,16 @@ function renderList(doc) {
     })
 
     deleteBtn.addEventListener('click', e => {
-        let id = e.target.parentElement.parentElement.getAttribute('data-id');
-        db.collection('alltodos').doc(currentUser.uid).collection('todos').doc(id).delete();
-        console.log(id);
-        targetDiv.remove();
-        desc.remove();
+        let decide = confirm('This item will be permanently deleted. Are you sure ?');
+        if (decide) {
+            let id = e.target.parentElement.parentElement.getAttribute('data-id');
+            db.collection('alltodos').doc(currentUser.uid).collection('todos').doc(id).delete();
+            console.log(id);
+            targetDiv.remove();
+            desc.remove();
+        } else {
+            window.location.reload();
+        }
 
     })
     editBtn.addEventListener('click', e => {
