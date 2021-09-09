@@ -120,6 +120,7 @@ input {
     color: green;
     font-weight: bold;
     margin-left: 10px;
+    text-align: center;
 }
 
 .data .status{
@@ -137,8 +138,7 @@ input {
 .data button:hover {
     background-color: black;
     color: lightseagreen;
-   
-    
+      
 }
 
 /* show-content  */
@@ -217,4 +217,97 @@ input {
     color: lightseagreen;
     background-color: black;
     border: 1px solid lightseagreen;
+}
+
+/* media Query */
+
+@media only screen and (max-width:500px){
+
+    /* Nav-bar */
+    #user{
+        font-size: large;
+    }
+
+    #logout{
+        font-size: medium;
+        font-weight: bold;
+        align-self: flex-end;
+        position: absolute;
+        right:70px;
+        margin-bottom: 10px;
+    }
+
+    /* Add task container*/
+    .container{
+        height: 35vh;
+    }
+    #task{
+        width: 40vw;
+    }
+    input{
+        font-size: small;
+    }
+    #add-task{
+        font-size: large;
+    }
+
+    /* Modal */
+
+    .modal {
+        height: 40vh;
+    }
+
+    .modal h3, .modal button{
+        font-size: large;
+    }
+    #edit-task{
+        font-size: medium;
+    }
+    #edit-date{
+        width: 35vw;
+        padding: 5px;
+    }
+
+    #exit{
+        width: 30px;
+    }
+    #save{
+        width: 20vw;
+    }
+    
+    /* todoList */
+
+    .data{
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .text{
+       margin-bottom: 12px;
+    }
+    .status{
+        display: flex;
+    }
+    .deadline{
+        padding: 5px;
+        height: 20px;
+    }
+    .data .btn{
+        margin-bottom: 10px;
+    }
+
+    /* description */
+
+    .desc{
+        font-size: medium;
+        height: 10vh;
+        background-color: lightgoldenrodyellow;
+    }
+
+
+
+
+
+
+
+
 }

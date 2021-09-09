@@ -76,6 +76,44 @@ button:hover{
 
 }
 
+/* Media query */
+
+@media only screen and (max-width:500px){
+
+    .container{
+        font-size: larger;
+        padding: 10px;
+    }
+    input{
+        font-size: medium;
+    }
+    h3{
+        font-size: small;
+    }
+
+    #btn{
+        flex-direction: column;
+        align-items: center;
+    }
+    #btn button{
+        font-size: 15px;
+    }
+    
+    #new{
+        margin-bottom: 20px;
+        height: 30px;
+        width: 120px;
+    }
+    #login{
+        width: 80px;
+        height: 30px;
+    }
+    #signup{
+        
+        height: 30px;
+    }
+}
+
 
 
 
