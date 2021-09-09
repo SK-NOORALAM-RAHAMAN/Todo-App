@@ -28,13 +28,13 @@ addTask.addEventListener('click', function addData(e) {
     if (head === '' || content === '' || date === '') {
         alert('Please enter all values (Heading, Date, Description) ');
     } else {
-
         // Adding data to FireBase
         db.collection('alltodos').doc(currentUser.uid).collection('todos').add({
             title: head,
             content: content,
             date: date
         })
+        document.getElementById('add-task-form').reset();
 
     }
 
