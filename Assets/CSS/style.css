@@ -94,6 +94,8 @@ input {
     font-size: large;
     display: flex;
     flex-direction: column;
+    height: fit-content;
+    padding-bottom: 100px;
 }
 
 .data {
@@ -159,7 +161,7 @@ input {
     position: absolute;
     top: 10rem;
     width: 60vw;
-    height: 45vh;
+    height:55vh;
     background: linear-gradient(lightseagreen,crimson);;
     border: 2px solid black;
     color: black;
@@ -183,6 +185,7 @@ input {
 .modal h3 {
     font-size: xx-large;
     font-weight: bold;
+    margin: 12px;
 }
 .modal input,textarea {
     background-color: gainsboro;
