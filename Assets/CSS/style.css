@@ -36,7 +36,7 @@ body{
     margin-top: 12px;
     padding: 10px;
     width: 80vw;
-    height: 40vh;
+    height: 280px;
     background: linear-gradient(to left ,lightgreen,crimson);
     border: 2px solid rgb(12, 175, 12);
 }
@@ -57,7 +57,6 @@ input {
 #task-date {
     margin-top: 10px;
     border: 2px solid lightseagreen;
-    color: seagreen;
     border-radius: 8px;
 }
 
@@ -161,7 +160,7 @@ input {
     position: absolute;
     top: 10rem;
     width: 60vw;
-    height:55vh;
+    height:350px;
     background: linear-gradient(lightseagreen,crimson);;
     border: 2px solid black;
     color: black;
@@ -238,9 +237,6 @@ input {
     }
 
     /* Add task container*/
-    .container{
-        height: 35vh;
-    }
     #task{
         width: 40vw;
     }
@@ -254,7 +250,7 @@ input {
     /* Modal */
 
     .modal {
-        height: 40vh;
+        height: 320px;
     }
 
     .modal h3, .modal button{

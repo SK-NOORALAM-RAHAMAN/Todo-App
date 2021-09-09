@@ -19,7 +19,7 @@ h1{
     background: linear-gradient(to left ,rgb(120, 219, 116),rgb(61, 228, 228));
     padding: 2rem;
     width: 70vw;
-    height: 60vh;
+    height: 340px;
     align-items: center;
     border: 2px solid black;
     display: flex;
@@ -101,16 +101,16 @@ button:hover{
     
     #new{
         margin-top: 20px;
-        height: 30px;
-        width: 120px;
+        height: 25px;
+        width: 110px;
     }
     #login{
-        width: 80px;
-        height: 30px;
+        width: 60px;
+        height: 25px;
     }
     #signup{
         
-        height: 30px;
+        height: 27px;
     }
 }
 
