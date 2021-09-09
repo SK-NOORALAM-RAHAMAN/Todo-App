@@ -118,6 +118,7 @@ input {
 }
 #date-label{
     display: none;
+    font-family: 'Ubuntu', sans-serif;
 }
 .data .deadline, #date-label{
     background-color: greenyellow;
@@ -130,6 +131,7 @@ input {
 
 .data .status{
     margin-block: 10px;
+    font-family: 'Ubuntu', sans-serif;
 }
 .data button {
     background-color: crimson;
