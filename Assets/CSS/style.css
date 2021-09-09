@@ -159,6 +159,7 @@ input {
    padding: 5px;
    margin-left: 8px;
    font-family: 'Ubuntu', sans-serif;
+   font-weight: lighter;
 }
 
 /* modal */
@@ -258,7 +259,7 @@ input {
         font-size: large;
     }
     #task-date{
-        width: 45px;
+        width: 120px;
     }
     #date-label{
         display: inline;
